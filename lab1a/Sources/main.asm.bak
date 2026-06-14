@@ -1,0 +1,43 @@
+
+;   Labor 1 - Vorbereitungsaufgabe 2.2
+;   Hochzählen eines Wertes im Sekundentakt und binäre Ausgabe
+;   des Wertes auf eine LED-Zeile
+;
+;   Computerarchitektur 3
+;   (C) 2014-2015 J. Friedrich, W. Zimmermann
+;   Hochschule Esslingen
+;
+;   Author:   W.Zimmermann, July 17, 2013    
+;            (based on code provided by J. Friedrich)
+;   Modified: W.Zimmermann, July 21, 2014
+;
+
+; export symbols
+        XDEF Entry, main
+
+; import symbols
+        XREF __SEG_END_SSTACK           ; End of stack
+
+; include derivative specific macros
+        INCLUDE 'mc9s12dp256.inc'
+
+; Defines
+SPEED:  EQU     $FFFF                   ; Change this number to change counting speed
+
+; RAM: Variable data section
+.data: SECTION
+
+; ROM: Constant data
+.const:SECTION                        
+
+; ROM: Code section
+.init: SECTION  
+
+main:                                   ; Begin of the program
+Entry:                  
+        LDS  #__SEG_END_SSTACK          ; Initialize stack pointer
+        CLI                             ; Enable interrupts, needed for debugger
+        
+;       ... ??? ...                     ; Add your code here
+
+
